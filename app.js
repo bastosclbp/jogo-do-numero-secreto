@@ -48,17 +48,14 @@ function gerarNumeroAleatorio() {
 		return gerarNumeroAleatorio();
 	} else {
 		listaDeNumerosSorteados.push(numeroEscolhido);
-		console.log(listaDeNumerosSorteados);
 		return numeroEscolhido;
 	}
 }
 
 function limparCampo() {
-	let chute = document.querySelector('input');
+	chute = document.querySelector('input');
 	chute.value = '';
 }
-
-console.log(numeroSecreto);
 
 function reiniciarJogo() {
 	numeroSecreto = gerarNumeroAleatorio();
@@ -66,5 +63,4 @@ function reiniciarJogo() {
 	tentativas = 1;
 	exibirMensagemInicial();
 	document.getElementById('reiniciar').setAttribute('disabled', true);
-	console.log(numeroSecreto);
 }
